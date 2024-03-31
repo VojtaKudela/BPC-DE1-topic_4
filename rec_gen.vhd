@@ -4,7 +4,7 @@
 -- 
 -- Create Date: 27.03.2024 22:51:28
 -- Design Name:
--- Module Name: counter_nnum - Behavioral
+-- Module Name: rec_gen - Behavioral
 -- Project Name: PWM Tone Generator
 -- Target Devices: nexys-a7-50t
 -- Tool Versions: 
@@ -85,7 +85,7 @@ CNT : counter_nnum
         phase => sig_phase
         );
 	
-get_sin_value : process (clk) is
+get_rec_value : process (clk) is
     begin
         if rising_edge(clk) then
             if (rst = '1') then
@@ -98,7 +98,7 @@ get_sin_value : process (clk) is
                 end if;
             end if;
         end if;
-    end process get_sin_value;
+    end process get_rec_value;
 
    smpl <= std_logic_vector( to_unsigned( sig_value, NBIT ));
    
