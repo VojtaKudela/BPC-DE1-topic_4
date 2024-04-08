@@ -34,7 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity bin2seg is
     Port ( clear : in STD_LOGIC;
            bin : in STD_LOGIC_VECTOR (4 downto 0);
-           seg : out STD_LOGIC_VECTOR (7 downto 0));
+           seg : out STD_LOGIC_VECTOR (6 downto 0));
 end bin2seg;
 
 architecture Behavioral of bin2seg is
@@ -51,70 +51,74 @@ p_7seg_decoder : process (bin, clear) is
 begin
 
   if (clear = '1') then
-    seg <= "01111111";  -- Clear the display
+    seg <= "1111111";  -- Clear the display
   else
 
     case bin is
       when x"0" =>     -- x"0" means "0000" in hexadec.
-        seg <= "00000001";
+        seg <= "0000001";
       when x"1" =>
-        seg <= "01001111";
+        seg <= "1001111";
       when x"2" =>
-        seg <= "00010010";
+        seg <= "0010010";
       when x"3" =>
-        seg <= "00000110";
+        seg <= "0000110";
       when x"4" =>
-        seg <= "01001100";
+        seg <= "1001100";
       when x"5" =>
-        seg <= "00100100";
+        seg <= "0100100";
       when x"6" =>
-        seg <= "00100000";
+        seg <= "0100000";
       when x"7" =>
-        seg <= "00001111";
+        seg <= "0001111";
       when x"8" =>
-        seg <= "00000000";
+        seg <= "0000000";
       when x"9" =>
-        seg <= "00000100";
+        seg <= "0000100";
       when x"A" =>
-        seg <= "00001000";
+        seg <= "0001000";
        when x"b" =>
-        seg <= "01100000";       
+        seg <= "1100000";       
        when x"C" =>
-        seg <= "00110001";  
+        seg <= "0110001";  
        when x"d" =>
-        seg <= "01000010";            
+        seg <= "1000010";            
       when x"E" =>
-        seg <= "00110000";
+        seg <= "0110000";
       when x"F" =>
-        seg <= "00111000";
+        seg <= "0111000";
       when "10000" =>
         seg <= "1001000";
       when "10001" =>
-        seg <= x"79";
+        seg <= "1111001";
       when "10010" =>
-        seg <= x"43";
+        seg <= "1000011";
       when "10011" =>
-        seg <= x"71";
+        seg <= "1110001";
       when "10100" =>
-        seg <= x"68";
+        seg <= "1101000";
       when "10101" =>
-        seg <= x"4A";
+        seg <= "1001010";
       when "10110" =>
-        seg <= x"6A";
+        seg <= "1101010";
       when "10111" =>
-        seg <= x"18";
+        seg <= "0011000";
       when "11000" =>
-        seg <= x"7A";
+        seg <= "1111010";
       when "11001" =>
-        seg <= x"0F";
+        seg <= "0001111";
       when "11010" =>
-        seg <= x"41";
+        seg <= "41";
       when "11011" =>
-        seg <= x"6C";
+        seg <= "1101100";
       when "11100" =>
-        seg <= x"77";
+        seg <= "1110111";
+      when "11101" =>
+        seg <= "1111000";
+      when "11110" =>
+        seg <= "1111111";
       when others =>
-        seg <= x"78";
+        seg <= "1111111";
       
     end case;
 
