@@ -1,12 +1,12 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: BUT FEEC
+-- Engineer: Antonin Putala 
 -- 
 -- Create Date: 04/11/2024 04:40:51 PM
 -- Design Name: 
 -- Module Name: bin2bcd - Behavioral
--- Project Name: 
--- Target Devices: 
+-- Project Name: PWM Tone Generator
+-- Target Devices: nexys-a7-50t
 -- Tool Versions: 
 -- Description: 
 -- 
