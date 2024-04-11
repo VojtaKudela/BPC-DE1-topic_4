@@ -1,12 +1,12 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: BUT FEEC
+-- Engineer: Antonin Putala 
 -- 
 -- Create Date: 04/11/2024 03:34:34 PM
 -- Design Name: 
 -- Module Name: sound_generator - Behavioral
--- Project Name: 
--- Target Devices: 
+-- Project Name: PWM Tone Generator
+-- Target Devices: nexys-a7-50t
 -- Tool Versions: 
 -- Description: 
 -- 
