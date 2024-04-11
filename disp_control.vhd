@@ -33,16 +33,17 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 --use UNISIM.VComponents.all;
 
 entity disp_control is
-    Port ( input_0 : in STD_LOGIC_VECTOR (4 downto 0);
-           input_1 : in STD_LOGIC_VECTOR (4 downto 0);
-           input_2 : in STD_LOGIC_VECTOR (4 downto 0);
-           input_3 : in STD_LOGIC_VECTOR (4 downto 0);
-           input_4 : in STD_LOGIC_VECTOR (4 downto 0);
-           input_5 : in STD_LOGIC_VECTOR (4 downto 0);
-           input_6 : in STD_LOGIC_VECTOR (4 downto 0);
-           input_7 : in STD_LOGIC_VECTOR (4 downto 0);
-           input_8 : in STD_LOGIC_VECTOR (4 downto 0);
-           input_9 : in STD_LOGIC_VECTOR (4 downto 0);
+    Port ( 
+           input_0  : in STD_LOGIC_VECTOR (4 downto 0);
+           input_1  : in STD_LOGIC_VECTOR (4 downto 0);
+           input_2  : in STD_LOGIC_VECTOR (4 downto 0);
+           input_3  : in STD_LOGIC_VECTOR (4 downto 0);
+           input_4  : in STD_LOGIC_VECTOR (4 downto 0);
+           input_5  : in STD_LOGIC_VECTOR (4 downto 0);
+           input_6  : in STD_LOGIC_VECTOR (4 downto 0);
+           input_7  : in STD_LOGIC_VECTOR (4 downto 0);
+           input_8  : in STD_LOGIC_VECTOR (4 downto 0);
+           input_9  : in STD_LOGIC_VECTOR (4 downto 0);
            input_10 : in STD_LOGIC_VECTOR (4 downto 0);
            input_11 : in STD_LOGIC_VECTOR (4 downto 0);
            input_12 : in STD_LOGIC_VECTOR (4 downto 0);
