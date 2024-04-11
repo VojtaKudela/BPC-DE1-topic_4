@@ -101,6 +101,7 @@ entity disp_control is
            
            input_mux_sel : in STD_LOGIC_VECTOR (2 downto 0); --selection ports for input multiplexers
            clk : in STD_LOGIC;
+           clear : in STD_LOGIC; 
            disp : out STD_LOGIC_VECTOR (6 downto 0);         
            anodes : out STD_LOGIC_VECTOR (7 downto 0)
            );
@@ -117,7 +118,7 @@ architecture Behavioral of disp_control is
     
      component clock_enable is
         generic (
-            N_PERIODS : integer
+            PERIOD : integer
         );
         port (
             clk   : in    std_logic;
@@ -128,13 +129,13 @@ architecture Behavioral of disp_control is
     
     component simple_counter is
         generic (
-           C_NBIT : integer
+           N : integer
            );
         Port ( 
            clk    : in  STD_LOGIC;
            rst    : in  STD_LOGIC;
            en     : in  STD_LOGIC;
-           count  : out STD_LOGIC_VECTOR (C_NBIT-1 downto 0)
+           count  : out STD_LOGIC_VECTOR (N-1 downto 0)
            );
     end component;
     
@@ -147,19 +148,19 @@ architecture Behavioral of disp_control is
     
     component mux3bit is
         generic (
-        MUX_NBIT : integer
+        NBIT : integer
          );
         Port ( 
-           in_0 : in STD_LOGIC_VECTOR (MUX_NBIT - 1 downto 0);
-           in_1 : in STD_LOGIC_VECTOR (MUX_NBIT - 1 downto 0);
-           in_2 : in STD_LOGIC_VECTOR (MUX_NBIT - 1 downto 0);
-           in_3 : in STD_LOGIC_VECTOR (MUX_NBIT - 1 downto 0);
-           in_4 : in STD_LOGIC_VECTOR (MUX_NBIT - 1 downto 0);
-           in_5 : in STD_LOGIC_VECTOR (MUX_NBIT - 1 downto 0);
-           in_6 : in STD_LOGIC_VECTOR (MUX_NBIT - 1 downto 0);
-           in_7 : in STD_LOGIC_VECTOR (MUX_NBIT - 1 downto 0);
+           in_0 : in STD_LOGIC_VECTOR (NBIT - 1 downto 0);
+           in_1 : in STD_LOGIC_VECTOR (NBIT - 1 downto 0);
+           in_2 : in STD_LOGIC_VECTOR (NBIT - 1 downto 0);
+           in_3 : in STD_LOGIC_VECTOR (NBIT - 1 downto 0);
+           in_4 : in STD_LOGIC_VECTOR (NBIT - 1 downto 0);
+           in_5 : in STD_LOGIC_VECTOR (NBIT - 1 downto 0);
+           in_6 : in STD_LOGIC_VECTOR (NBIT - 1 downto 0);
+           in_7 : in STD_LOGIC_VECTOR (NBIT - 1 downto 0);
            sel : in STD_LOGIC_VECTOR (2 downto 0);
-           output : out STD_LOGIC_VECTOR (MUX_NBIT - 1 downto 0)
+           output : out STD_LOGIC_VECTOR (NBIT - 1 downto 0)
            );
     end component;
     
@@ -182,14 +183,14 @@ begin
 
      display : component bin2seg
         port map (
-            clear  => '0',
+            clear  => clear,
             bin    => sig_mux_2_dis,
             seg    => disp 
         );
 
     clk_en : component clock_enable
         generic map (
-            N_PERIODS => 200_000 -- 2ms
+            PERIOD => 200_000 -- 2ms
         )
         
         port map (
@@ -200,7 +201,7 @@ begin
         
     simp_c : component simple_counter
         generic map (
-            C_NBIT => 3
+            N => 3
         )
         
         port map (
@@ -219,7 +220,7 @@ begin
            
     main_mux : component mux3bit
         generic map (
-            MUX_NBIT => 5
+            NBIT => 5
         )
         
         port map (
@@ -237,7 +238,7 @@ begin
            
     mux0 : component mux3bit
         generic map (
-            MUX_NBIT => 5
+            NBIT => 5
         )
         
         port map (
@@ -255,7 +256,7 @@ begin
            
     mux1 : component mux3bit
         generic map (
-            MUX_NBIT => 5
+            NBIT => 5
         )
         
         port map (
@@ -273,7 +274,7 @@ begin
           
     mux2 : component mux3bit
         generic map (
-            MUX_NBIT => 5
+            NBIT => 5
         )
         
         port map (
@@ -291,7 +292,7 @@ begin
            
     mux3 : component mux3bit
         generic map (
-            MUX_NBIT => 5
+            NBIT => 5
         )
         
         port map (
@@ -309,7 +310,7 @@ begin
            
     mux4 : component mux3bit
         generic map (
-            MUX_NBIT => 5
+            NBIT => 5
         )
         
         port map (
@@ -327,7 +328,7 @@ begin
            
     mux5 : component mux3bit
         generic map (
-            MUX_NBIT => 5
+            NBIT => 5
         )
         
         port map (
@@ -345,7 +346,7 @@ begin
            
     mux6 : component mux3bit
         generic map (
-            MUX_NBIT => 5
+            NBIT => 5
         )
         
         port map (
@@ -363,7 +364,7 @@ begin
            
     mux7 : component mux3bit
         generic map (
-            MUX_NBIT => 5
+            NBIT => 5
         )
         
         port map (
