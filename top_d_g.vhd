@@ -42,7 +42,7 @@ entity top_d_g is
            AN        : out STD_LOGIC_VECTOR (7 downto 0);
            DP        : out STD_LOGIC;
            LED16_B   : out STD_LOGIC;
-           PWM       : out STD_LOGIC;
+           AUD_PWM   : out STD_LOGIC;
            SW        : in  STD_LOGIC_VECTOR (15 downto 0);
            CA        : out STD_LOGIC;
            CB        : out STD_LOGIC;
@@ -51,12 +51,15 @@ entity top_d_g is
            CE        : out STD_LOGIC;
            CF        : out STD_LOGIC;
            CG        : out STD_LOGIC;
-           LED       : out STD_LOGIC_VECTOR (15 downto 0))
-           ;
+           LED       : out STD_LOGIC_VECTOR (15 downto 0);
+           JB        : out STD_LOGIC
+           );
 end top_d_g;
 
 architecture Behavioral of top_d_g is
-
+    
+    signal sig_pwm   : STD_LOGIC;
+    
     component display_and_gen
         Port ( 
            clk       : in  STD_LOGIC;
@@ -99,10 +102,13 @@ begin
             dem_01      => x"7F",  --nothing
             dem_02      => x"7F",
             dem_03      => x"7F",
-            pwm_out     => PWM
+            pwm_out     => sig_pwm
             );
             
-            LED <= SW;
-            DP  <= '0';
+            LED     <= SW;
+            DP      <= '1';
+            AUD_PWM <= sig_pwm;
+            JB      <= sig_pwm;
+            
 
 end Behavioral;
