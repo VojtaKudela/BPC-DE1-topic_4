@@ -42,7 +42,7 @@ end demo_ins;
 architecture Behavioral of demo_ins is
 
 begin
-    melody_01 : process (step)is
+    melody_01 : process (step) is -- Fuer Elise
   begin
     
     case step is
