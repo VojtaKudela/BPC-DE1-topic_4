@@ -43,7 +43,7 @@ architecture Behavioral of coder_1_from_16 is
 
 begin
     
-    code : process(bcd)
+    code : process(bcd,any)
     begin
         if (any = '1') then
             case (bcd) is
