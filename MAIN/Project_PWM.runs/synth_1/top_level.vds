@@ -1,0 +1,620 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Apr 19 09:14:09 2024
+# Process ID: 9560
+# Current directory: C:/Users/246922/Project_PWM/Project_PWM.runs/synth_1
+# Command line: vivado.exe -log top_level.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level.tcl
+# Log file: C:/Users/246922/Project_PWM/Project_PWM.runs/synth_1/top_level.vds
+# Journal file: C:/Users/246922/Project_PWM/Project_PWM.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top_level.tcl -notrace
+Command: synth_design -top top_level -part xc7a50ticsg324-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a50ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a50ti'
+INFO: [Device 21-403] Loading part xc7a50ticsg324-1L
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1396
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 999.164 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/top_level.vhd:66]
+INFO: [Synth 8-3491] module 'display_and_gen_and_demo' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/display_and_gen_and_demo.vhd:34' bound to instance 'DAG' of component 'display_and_gen_and_demo' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/top_level.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'display_and_gen_and_demo' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/display_and_gen_and_demo.vhd:55]
+INFO: [Synth 8-3491] module 'coder_1_from_16' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/coder_1_from_16.vhd:34' bound to instance 'CODER_LED' of component 'coder_1_from_16' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/display_and_gen_and_demo.vhd:131]
+INFO: [Synth 8-638] synthesizing module 'coder_1_from_16' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/coder_1_from_16.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'coder_1_from_16' (1#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/coder_1_from_16.vhd:42]
+	Parameter PERIOD bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'matrix_control' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/matrix_control.vhd:34' bound to instance 'MATR_K' of component 'matrix_control' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/display_and_gen_and_demo.vhd:138]
+INFO: [Synth 8-638] synthesizing module 'matrix_control' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/matrix_control.vhd:46]
+	Parameter PERIOD bound to: 100 - type: integer 
+	Parameter PERIOD bound to: 100 - type: integer 
+INFO: [Synth 8-3491] module 'clock_enable' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/clock_enable.vhd:36' bound to instance 'CL_EN' of component 'clock_enable' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/matrix_control.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'clock_enable' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/clock_enable.vhd:47]
+	Parameter PERIOD bound to: 100 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clock_enable' (2#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/clock_enable.vhd:47]
+	Parameter PERIOD bound to: 100000 - type: integer 
+INFO: [Synth 8-3491] module 'clock_enable' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/clock_enable.vhd:36' bound to instance 'DELAY' of component 'clock_enable' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/matrix_control.vhd:78]
+INFO: [Synth 8-638] synthesizing module 'clock_enable__parameterized1' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/clock_enable.vhd:47]
+	Parameter PERIOD bound to: 100000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clock_enable__parameterized1' (2#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/clock_enable.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'matrix_control' (3#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/matrix_control.vhd:46]
+INFO: [Synth 8-3491] module 'display_and_gen' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/display_and_gen.vhd:34' bound to instance 'D_A_G' of component 'display_and_gen' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/display_and_gen_and_demo.vhd:151]
+INFO: [Synth 8-638] synthesizing module 'display_and_gen' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/display_and_gen.vhd:55]
+INFO: [Synth 8-3491] module 'sound_generator' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/sound_generator.vhd:36' bound to instance 'SOUND_GEN' of component 'sound_generator' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/display_and_gen.vhd:105]
+INFO: [Synth 8-638] synthesizing module 'sound_generator' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/sound_generator.vhd:51]
+	Parameter PERIOD bound to: 4160 - type: integer 
+INFO: [Synth 8-3491] module 'clock_enable' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/clock_enable.vhd:36' bound to instance 'CL_EN' of component 'clock_enable' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/sound_generator.vhd:172]
+INFO: [Synth 8-638] synthesizing module 'clock_enable__parameterized3' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/clock_enable.vhd:47]
+	Parameter PERIOD bound to: 4160 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clock_enable__parameterized3' (3#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/clock_enable.vhd:47]
+	Parameter NBIT bound to: 8 - type: integer 
+	Parameter FSMP bound to: 12000 - type: integer 
+INFO: [Synth 8-3491] module 'rec_gen' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/rec_gen.vhd:37' bound to instance 'G_01' of component 'rec_gen' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/sound_generator.vhd:195]
+INFO: [Synth 8-638] synthesizing module 'rec_gen' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/rec_gen.vhd:51]
+	Parameter NBIT bound to: 8 - type: integer 
+	Parameter FSMP bound to: 12000 - type: integer 
+	Parameter FSMP bound to: 12000 - type: integer 
+	Parameter NBIT bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'counter_nnum' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/counter_nnum.vhd:37' bound to instance 'CNT' of component 'counter_nnum' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/rec_gen.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'counter_nnum' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/counter_nnum.vhd:50]
+	Parameter FSMP bound to: 12000 - type: integer 
+	Parameter NBIT bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'counter_nnum' (4#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/counter_nnum.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'rec_gen' (5#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/rec_gen.vhd:51]
+	Parameter NBIT bound to: 8 - type: integer 
+	Parameter FSMP bound to: 12000 - type: integer 
+INFO: [Synth 8-3491] module 'tri_gen' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/tri_gen.vhd:36' bound to instance 'G_02' of component 'tri_gen' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/sound_generator.vhd:208]
+INFO: [Synth 8-638] synthesizing module 'tri_gen' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/tri_gen.vhd:50]
+	Parameter NBIT bound to: 8 - type: integer 
+	Parameter FSMP bound to: 12000 - type: integer 
+	Parameter FSMP bound to: 12000 - type: integer 
+	Parameter NBIT bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'counter_nnum' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/counter_nnum.vhd:37' bound to instance 'CNT' of component 'counter_nnum' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/tri_gen.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'tri_gen' (6#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/tri_gen.vhd:50]
+	Parameter NBIT bound to: 8 - type: integer 
+	Parameter FSMP bound to: 12000 - type: integer 
+INFO: [Synth 8-3491] module 'saw_gen' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/saw_gen.vhd:37' bound to instance 'G_03' of component 'saw_gen' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/sound_generator.vhd:221]
+INFO: [Synth 8-638] synthesizing module 'saw_gen' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/saw_gen.vhd:51]
+	Parameter NBIT bound to: 8 - type: integer 
+	Parameter FSMP bound to: 12000 - type: integer 
+	Parameter FSMP bound to: 12000 - type: integer 
+	Parameter NBIT bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'counter_nnum' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/counter_nnum.vhd:37' bound to instance 'CNT' of component 'counter_nnum' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/saw_gen.vhd:75]
+INFO: [Synth 8-256] done synthesizing module 'saw_gen' (7#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/saw_gen.vhd:51]
+	Parameter NBIT bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'mux3bit' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:34' bound to instance 'MUX' of component 'mux3bit' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/sound_generator.vhd:234]
+INFO: [Synth 8-638] synthesizing module 'mux3bit' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:52]
+	Parameter NBIT bound to: 8 - type: integer 
+WARNING: [Synth 8-614] signal 'in_0' is read in the process but is not in the sensitivity list [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:55]
+WARNING: [Synth 8-614] signal 'in_1' is read in the process but is not in the sensitivity list [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:55]
+WARNING: [Synth 8-614] signal 'in_2' is read in the process but is not in the sensitivity list [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:55]
+WARNING: [Synth 8-614] signal 'in_3' is read in the process but is not in the sensitivity list [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:55]
+WARNING: [Synth 8-614] signal 'in_4' is read in the process but is not in the sensitivity list [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:55]
+WARNING: [Synth 8-614] signal 'in_5' is read in the process but is not in the sensitivity list [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:55]
+WARNING: [Synth 8-614] signal 'in_6' is read in the process but is not in the sensitivity list [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:55]
+WARNING: [Synth 8-614] signal 'in_7' is read in the process but is not in the sensitivity list [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'mux3bit' (8#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:52]
+	Parameter NBIT bound to: 8 - type: integer 
+	Parameter PERIOD bound to: 40 - type: integer 
+INFO: [Synth 8-3491] module 'PWM_mod' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/PWM_mod.vhd:34' bound to instance 'PWM' of component 'PWM_mod' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/sound_generator.vhd:251]
+INFO: [Synth 8-638] synthesizing module 'PWM_mod' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/PWM_mod.vhd:48]
+	Parameter NBIT bound to: 8 - type: integer 
+	Parameter PERIOD bound to: 40 - type: integer 
+	Parameter PERIOD bound to: 40 - type: integer 
+INFO: [Synth 8-3491] module 'clock_enable' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/clock_enable.vhd:36' bound to instance 'CLK_EN' of component 'clock_enable' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/PWM_mod.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'clock_enable__parameterized5' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/clock_enable.vhd:47]
+	Parameter PERIOD bound to: 40 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clock_enable__parameterized5' (8#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/clock_enable.vhd:47]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'simple_counter' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/simple_counter.vhd:34' bound to instance 'CNT' of component 'simple_counter' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/PWM_mod.vhd:103]
+INFO: [Synth 8-638] synthesizing module 'simple_counter' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/simple_counter.vhd:46]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'simple_counter' (9#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/simple_counter.vhd:46]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'kompareNbit' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/kompareNbit.vhd:34' bound to instance 'KOM' of component 'kompareNbit' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/PWM_mod.vhd:114]
+INFO: [Synth 8-638] synthesizing module 'kompareNbit' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/kompareNbit.vhd:48]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'kompareNbit' (10#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/kompareNbit.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'PWM_mod' (11#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/PWM_mod.vhd:48]
+INFO: [Synth 8-3491] module 'boot_to_freq' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/boot_to_freq.vhd:34' bound to instance 'B2F' of component 'boot_to_freq' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/sound_generator.vhd:263]
+INFO: [Synth 8-638] synthesizing module 'boot_to_freq' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/boot_to_freq.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'boot_to_freq' (12#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/boot_to_freq.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'sound_generator' (13#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/sound_generator.vhd:51]
+INFO: [Synth 8-3491] module 'test411' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/test1.vhd:34' bound to instance 'DISP_CON' of component 'test411' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/display_and_gen.vhd:119]
+INFO: [Synth 8-638] synthesizing module 'test411' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/test1.vhd:52]
+INFO: [Synth 8-3491] module 'main_loop' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/main_loop.vhd:34' bound to instance 'main' of component 'main_loop' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/test1.vhd:194]
+INFO: [Synth 8-638] synthesizing module 'main_loop' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/main_loop.vhd:53]
+	Parameter PERIOD bound to: 200000000 - type: integer 
+INFO: [Synth 8-3491] module 'clock_enable' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/clock_enable.vhd:36' bound to instance 'DELAY' of component 'clock_enable' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/main_loop.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'clock_enable__parameterized7' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/clock_enable.vhd:47]
+	Parameter PERIOD bound to: 200000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clock_enable__parameterized7' (13#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/clock_enable.vhd:47]
+INFO: [Synth 8-226] default block is never used [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/main_loop.vhd:92]
+WARNING: [Synth 8-614] signal 'vol_in' is read in the process but is not in the sensitivity list [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/main_loop.vhd:257]
+INFO: [Synth 8-256] done synthesizing module 'main_loop' (14#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/main_loop.vhd:53]
+INFO: [Synth 8-3491] module 'mode_control' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mode_control.vhd:35' bound to instance 'mode_cnt' of component 'mode_control' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/test1.vhd:211]
+INFO: [Synth 8-638] synthesizing module 'mode_control' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mode_control.vhd:45]
+	Parameter PERIOD bound to: 200000 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/debounce.vhd:34' bound to instance 'DEB00' of component 'debounce' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mode_control.vhd:78]
+INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/debounce.vhd:48]
+	Parameter PERIOD bound to: 200000 - type: integer 
+	Parameter PERIOD bound to: 200000 - type: integer 
+INFO: [Synth 8-3491] module 'clock_enable' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/clock_enable.vhd:36' bound to instance 'CL_EN' of component 'clock_enable' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/debounce.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'clock_enable__parameterized9' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/clock_enable.vhd:47]
+	Parameter PERIOD bound to: 200000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clock_enable__parameterized9' (14#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/clock_enable.vhd:47]
+INFO: [Synth 8-226] default block is never used [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/debounce.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (15#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/debounce.vhd:48]
+	Parameter PERIOD bound to: 200000 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/debounce.vhd:34' bound to instance 'DEB01' of component 'debounce' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mode_control.vhd:91]
+	Parameter N bound to: 3 - type: integer 
+	Parameter short bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'updown_counter' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/updown_counter.vhd:35' bound to instance 'COUNT' of component 'updown_counter' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mode_control.vhd:104]
+INFO: [Synth 8-638] synthesizing module 'updown_counter' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/updown_counter.vhd:48]
+	Parameter N bound to: 3 - type: integer 
+	Parameter short bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'updown_counter' (16#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/updown_counter.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'mode_control' (17#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mode_control.vhd:45]
+INFO: [Synth 8-3491] module 'disp_control' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/disp_control.vhd:35' bound to instance 'disp_ctr' of component 'disp_control' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/test1.vhd:222]
+INFO: [Synth 8-638] synthesizing module 'disp_control' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/disp_control.vhd:110]
+INFO: [Synth 8-3491] module 'bin2seg' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/bin2seg.vhd:34' bound to instance 'display' of component 'bin2seg' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/disp_control.vhd:184]
+INFO: [Synth 8-638] synthesizing module 'bin2seg' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/bin2seg.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'bin2seg' (18#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/bin2seg.vhd:40]
+	Parameter PERIOD bound to: 200000 - type: integer 
+INFO: [Synth 8-3491] module 'clock_enable' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/clock_enable.vhd:36' bound to instance 'clk_en' of component 'clock_enable' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/disp_control.vhd:191]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'simple_counter' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/simple_counter.vhd:34' bound to instance 'simp_c' of component 'simple_counter' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/disp_control.vhd:202]
+INFO: [Synth 8-638] synthesizing module 'simple_counter__parameterized1' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/simple_counter.vhd:46]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'simple_counter__parameterized1' (18#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/simple_counter.vhd:46]
+INFO: [Synth 8-3491] module 'prev' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/prev.vhd:34' bound to instance 'one_to_eight' of component 'prev' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/disp_control.vhd:214]
+INFO: [Synth 8-638] synthesizing module 'prev' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/prev.vhd:40]
+INFO: [Synth 8-226] default block is never used [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/prev.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'prev' (19#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/prev.vhd:40]
+	Parameter NBIT bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'mux3bit' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:34' bound to instance 'main_mux' of component 'mux3bit' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/disp_control.vhd:221]
+INFO: [Synth 8-638] synthesizing module 'mux3bit__parameterized1' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:52]
+	Parameter NBIT bound to: 5 - type: integer 
+WARNING: [Synth 8-614] signal 'in_0' is read in the process but is not in the sensitivity list [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:55]
+WARNING: [Synth 8-614] signal 'in_1' is read in the process but is not in the sensitivity list [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:55]
+WARNING: [Synth 8-614] signal 'in_2' is read in the process but is not in the sensitivity list [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:55]
+WARNING: [Synth 8-614] signal 'in_3' is read in the process but is not in the sensitivity list [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:55]
+WARNING: [Synth 8-614] signal 'in_4' is read in the process but is not in the sensitivity list [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:55]
+WARNING: [Synth 8-614] signal 'in_5' is read in the process but is not in the sensitivity list [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:55]
+WARNING: [Synth 8-614] signal 'in_6' is read in the process but is not in the sensitivity list [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:55]
+WARNING: [Synth 8-614] signal 'in_7' is read in the process but is not in the sensitivity list [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'mux3bit__parameterized1' (19#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:52]
+	Parameter NBIT bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'mux3bit' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:34' bound to instance 'mux0' of component 'mux3bit' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/disp_control.vhd:239]
+	Parameter NBIT bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'mux3bit' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:34' bound to instance 'mux1' of component 'mux3bit' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/disp_control.vhd:257]
+	Parameter NBIT bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'mux3bit' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:34' bound to instance 'mux2' of component 'mux3bit' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/disp_control.vhd:275]
+	Parameter NBIT bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'mux3bit' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:34' bound to instance 'mux3' of component 'mux3bit' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/disp_control.vhd:293]
+	Parameter NBIT bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'mux3bit' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:34' bound to instance 'mux4' of component 'mux3bit' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/disp_control.vhd:311]
+	Parameter NBIT bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'mux3bit' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:34' bound to instance 'mux5' of component 'mux3bit' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/disp_control.vhd:329]
+	Parameter NBIT bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'mux3bit' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:34' bound to instance 'mux6' of component 'mux3bit' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/disp_control.vhd:347]
+	Parameter NBIT bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'mux3bit' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux3bit.vhd:34' bound to instance 'mux7' of component 'mux3bit' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/disp_control.vhd:365]
+INFO: [Synth 8-256] done synthesizing module 'disp_control' (20#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/disp_control.vhd:110]
+INFO: [Synth 8-3491] module 'volume_control' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/volume_control.vhd:35' bound to instance 'volume_cnt' of component 'volume_control' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/test1.vhd:304]
+INFO: [Synth 8-638] synthesizing module 'volume_control' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/volume_control.vhd:44]
+	Parameter PERIOD bound to: 200000 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/debounce.vhd:34' bound to instance 'DEB00' of component 'debounce' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/volume_control.vhd:76]
+	Parameter PERIOD bound to: 200000 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/debounce.vhd:34' bound to instance 'DEB01' of component 'debounce' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/volume_control.vhd:89]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'updown_counter_limited' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/updown_counter_limited.vhd:35' bound to instance 'COUNT' of component 'updown_counter_limited' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/volume_control.vhd:102]
+INFO: [Synth 8-638] synthesizing module 'updown_counter_limited' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/updown_counter_limited.vhd:47]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'updown_counter_limited' (21#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/updown_counter_limited.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'volume_control' (22#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/volume_control.vhd:44]
+INFO: [Synth 8-3491] module 'bin2bcd' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/bin2bcd.vhd:34' bound to instance 'b2b' of component 'bin2bcd' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/test1.vhd:315]
+INFO: [Synth 8-638] synthesizing module 'bin2bcd' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/bin2bcd.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'bin2bcd' (23#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/bin2bcd.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'test411' (24#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/test1.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'display_and_gen' (25#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/display_and_gen.vhd:55]
+INFO: [Synth 8-3491] module 'demo_main' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/demo_main.vhd:34' bound to instance 'DEMO_M' of component 'demo_main' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/display_and_gen_and_demo.vhd:171]
+INFO: [Synth 8-638] synthesizing module 'demo_main' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/demo_main.vhd:44]
+	Parameter PERIOD bound to: 20000000 - type: integer 
+INFO: [Synth 8-3491] module 'clock_enable' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/clock_enable.vhd:36' bound to instance 'NEXT_POINT' of component 'clock_enable' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/demo_main.vhd:148]
+INFO: [Synth 8-638] synthesizing module 'clock_enable__parameterized11' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/clock_enable.vhd:47]
+	Parameter PERIOD bound to: 20000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clock_enable__parameterized11' (25#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/clock_enable.vhd:47]
+	Parameter N bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'simple_counter' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/simple_counter.vhd:34' bound to instance 'CNT_POINT' of component 'simple_counter' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/demo_main.vhd:158]
+INFO: [Synth 8-638] synthesizing module 'simple_counter__parameterized3' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/simple_counter.vhd:46]
+	Parameter N bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'simple_counter__parameterized3' (25#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/simple_counter.vhd:46]
+INFO: [Synth 8-3491] module 'demo_ins' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/demo_ins.vhd:34' bound to instance 'DEMO_INS_01' of component 'demo_ins' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/demo_main.vhd:169]
+INFO: [Synth 8-638] synthesizing module 'demo_ins' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/demo_ins.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'demo_ins' (26#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/demo_ins.vhd:42]
+INFO: [Synth 8-3491] module 'demo_ins_1' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/demo_ins_1.vhd:34' bound to instance 'DEMO_INS_02' of component 'demo_ins_1' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/demo_main.vhd:176]
+INFO: [Synth 8-638] synthesizing module 'demo_ins_1' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/demo_ins_1.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'demo_ins_1' (27#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/demo_ins_1.vhd:42]
+INFO: [Synth 8-3491] module 'demo_ins_2' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/demo_ins_2.vhd:34' bound to instance 'DEMO_INS_3' of component 'demo_ins_2' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/demo_main.vhd:183]
+INFO: [Synth 8-638] synthesizing module 'demo_ins_2' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/demo_ins_2.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'demo_ins_2' (28#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/demo_ins_2.vhd:42]
+	Parameter NBIT bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'mux' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux.vhd:34' bound to instance 'MUX_FREQ' of component 'mux' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/demo_main.vhd:190]
+INFO: [Synth 8-638] synthesizing module 'mux' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux.vhd:48]
+	Parameter NBIT bound to: 4 - type: integer 
+WARNING: [Synth 8-614] signal 'in_0' is read in the process but is not in the sensitivity list [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux.vhd:51]
+WARNING: [Synth 8-614] signal 'in_1' is read in the process but is not in the sensitivity list [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux.vhd:51]
+WARNING: [Synth 8-614] signal 'in_2' is read in the process but is not in the sensitivity list [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux.vhd:51]
+WARNING: [Synth 8-614] signal 'in_3' is read in the process but is not in the sensitivity list [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'mux' (29#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux.vhd:48]
+	Parameter NBIT bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'mux' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/mux.vhd:34' bound to instance 'MUX_VOL' of component 'mux' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/demo_main.vhd:203]
+	Parameter PERIOD bound to: 4160 - type: integer 
+INFO: [Synth 8-3491] module 'clock_enable' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/clock_enable.vhd:36' bound to instance 'CL_TRI' of component 'clock_enable' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/demo_main.vhd:216]
+INFO: [Synth 8-3491] module 'freq_conv' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/freq_conv.vhd:34' bound to instance 'FREQ_CV' of component 'freq_conv' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/demo_main.vhd:226]
+INFO: [Synth 8-638] synthesizing module 'freq_conv' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/freq_conv.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'freq_conv' (30#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/freq_conv.vhd:41]
+	Parameter NBIT bound to: 8 - type: integer 
+	Parameter FSMP bound to: 12000 - type: integer 
+INFO: [Synth 8-3491] module 'tri_gen' declared at 'C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/tri_gen.vhd:36' bound to instance 'GENERATOR' of component 'tri_gen' [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/demo_main.vhd:232]
+INFO: [Synth 8-256] done synthesizing module 'demo_main' (31#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/demo_main.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'display_and_gen_and_demo' (32#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/display_and_gen_and_demo.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'top_level' (33#1) [C:/Users/246922/Project_PWM/Project_PWM.srcs/sources_1/new/top_level.vhd:66]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 999.164 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 999.164 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 999.164 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 999.164 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/246922/Project_PWM/Project_PWM.srcs/constrs_1/new/nexy-a7-50t.xdc]
+Finished Parsing XDC File [C:/Users/246922/Project_PWM/Project_PWM.srcs/constrs_1/new/nexy-a7-50t.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/246922/Project_PWM/Project_PWM.srcs/constrs_1/new/nexy-a7-50t.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_level_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1004.727 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1004.727 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1004.727 ; gain = 5.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a50ticsg324-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1004.727 ; gain = 5.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1004.727 ; gain = 5.562
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'matrix_control'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'main_loop'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'debounce'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                            00000 |                            00100
+                      r0 |                            00001 |                            00000
+                      s0 |                            00010 |                            00101
+                      s1 |                            00011 |                            00110
+                      s2 |                            00100 |                            00111
+                      s3 |                            00101 |                            01000
+                      r1 |                            00110 |                            00001
+                      s4 |                            00111 |                            01001
+                      s5 |                            01000 |                            01010
+                      s6 |                            01001 |                            01011
+                      s7 |                            01010 |                            01100
+                      r2 |                            01011 |                            00010
+                      s8 |                            01100 |                            01101
+                      s9 |                            01101 |                            01110
+                     s10 |                            01110 |                            01111
+                     s11 |                            01111 |                            10000
+                      r3 |                            10000 |                            00011
+                     s12 |                            10001 |                            10001
+                     s13 |                            10010 |                            10010
+                     s14 |                            10011 |                            10011
+                     s15 |                            10100 |                            10100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'matrix_control'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    safe |                              001 |                              000
+                   democ |                              010 |                              110
+                  square |                              100 |                              001
+                triangle |                              111 |                              010
+                     saw |                              110 |                              011
+                   demoa |                              101 |                              100
+                   demob |                              011 |                              101
+                  volume |                              000 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'main_loop'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                released |                               00 |                               00
+             pre_pressed |                               01 |                               01
+                 pressed |                               10 |                               10
+            pre_released |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'debounce'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1004.727 ; gain = 5.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 6     
+	   3 Input   32 Bit       Adders := 3     
+	   2 Input   31 Bit       Adders := 3     
+	   2 Input   17 Bit       Adders := 8     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 6     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               17 Bit    Registers := 8     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 5     
+	                1 Bit    Registers := 22    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 8     
+	   2 Input   31 Bit        Muxes := 3     
+	  17 Input   16 Bit        Muxes := 1     
+	   2 Input   15 Bit        Muxes := 4     
+	   2 Input    9 Bit        Muxes := 1     
+	   9 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
+	  58 Input    5 Bit        Muxes := 1     
+	  21 Input    4 Bit        Muxes := 2     
+	   8 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
+	   4 Input    4 Bit        Muxes := 3     
+	   8 Input    3 Bit        Muxes := 1     
+	  40 Input    3 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 5     
+	   4 Input    2 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 9     
+	   2 Input    1 Bit        Muxes := 41    
+	  21 Input    1 Bit        Muxes := 4     
+	   8 Input    1 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 8     
+	  16 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP sig_value3, operation Mode is: A2*B.
+DSP Report: register sig_value3 is absorbed into DSP sig_value3.
+DSP Report: operator sig_value3 is absorbed into DSP sig_value3.
+DSP Report: Generating DSP sig_value4, operation Mode is: A*B.
+DSP Report: operator sig_value4 is absorbed into DSP sig_value4.
+DSP Report: operator sig_value4 is absorbed into DSP sig_value4.
+DSP Report: Generating DSP sig_value4, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator sig_value4 is absorbed into DSP sig_value4.
+DSP Report: operator sig_value4 is absorbed into DSP sig_value4.
+DSP Report: Generating DSP sig_value5, operation Mode is: A*B2.
+DSP Report: register sig_value5 is absorbed into DSP sig_value5.
+DSP Report: operator sig_value5 is absorbed into DSP sig_value5.
+DSP Report: operator sig_value5 is absorbed into DSP sig_value5.
+DSP Report: Generating DSP sig_value5, operation Mode is: (PCIN>>17)+(D+A2)*B.
+DSP Report: register CNT/sig_temp_reg is absorbed into DSP sig_value5.
+DSP Report: register CNT/sig_count_reg is absorbed into DSP sig_value5.
+DSP Report: operator CNT/sig_count0 is absorbed into DSP sig_value5.
+DSP Report: operator sig_value5 is absorbed into DSP sig_value5.
+DSP Report: operator sig_value5 is absorbed into DSP sig_value5.
+DSP Report: Generating DSP sig_value3, operation Mode is: A2*B.
+DSP Report: register sig_value3 is absorbed into DSP sig_value3.
+DSP Report: operator sig_value3 is absorbed into DSP sig_value3.
+DSP Report: Generating DSP sig_value4, operation Mode is: A*B.
+DSP Report: operator sig_value4 is absorbed into DSP sig_value4.
+DSP Report: operator sig_value4 is absorbed into DSP sig_value4.
+DSP Report: Generating DSP sig_value4, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator sig_value4 is absorbed into DSP sig_value4.
+DSP Report: operator sig_value4 is absorbed into DSP sig_value4.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1004.727 ; gain = 5.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping	Report
++------------+-----------------------------------------+---------------+----------------+
+|Module Name | RTL Object                              | Depth x Width | Implemented As | 
++------------+-----------------------------------------+---------------+----------------+
+|bin2seg     | seg                                     | 32x7          | LUT            | 
+|demo_ins    | freq                                    | 64x4          | LUT            | 
+|demo_ins    | vol                                     | 64x4          | LUT            | 
+|demo_ins_1  | freq                                    | 64x4          | LUT            | 
+|demo_ins_1  | vol                                     | 64x4          | LUT            | 
+|demo_ins_2  | freq                                    | 64x4          | LUT            | 
+|demo_ins_2  | vol                                     | 64x4          | LUT            | 
+|demo_main   | DEMO_INS_01/freq                        | 64x4          | LUT            | 
+|demo_main   | DEMO_INS_01/vol                         | 64x4          | LUT            | 
+|demo_main   | DEMO_INS_02/freq                        | 64x4          | LUT            | 
+|demo_main   | DEMO_INS_02/vol                         | 64x4          | LUT            | 
+|demo_main   | DEMO_INS_3/freq                         | 64x4          | LUT            | 
+|demo_main   | DEMO_INS_3/vol                          | 64x4          | LUT            | 
+|top_level   | DAG/D_A_G/DISP_CON/disp_ctr/display/seg | 32x7          | LUT            | 
++------------+-----------------------------------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping	Report (see note below)
++------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping         | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|tri_gen     | A2*B                | 18     | 10     | -      | -      | 28     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|tri_gen     | A*B                 | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|tri_gen     | (PCIN>>17)+A*B      | 15     | 10     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|saw_gen     | A*B2                | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|saw_gen     | (PCIN>>17)+(D+A2)*B | 17     | 15     | -      | 15     | 15     | 1    | 0    | -    | 0    | 1     | 0    | 0    | 
+|tri_gen     | A2*B                | 18     | 10     | -      | -      | 28     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|tri_gen     | A*B                 | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|tri_gen     | (PCIN>>17)+A*B      | 15     | 10     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1052.340 ; gain = 53.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:03 ; elapsed = 00:01:04 . Memory (MB): peak = 1143.391 ; gain = 144.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:05 ; elapsed = 00:01:07 . Memory (MB): peak = 1153.449 ; gain = 154.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 1153.449 ; gain = 154.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 1153.449 ; gain = 154.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 1153.449 ; gain = 154.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 1153.449 ; gain = 154.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 1153.449 ; gain = 154.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 1153.449 ; gain = 154.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     3|
+|2     |CARRY4  |   472|
+|3     |DSP48E1 |     8|
+|7     |LUT1    |   184|
+|8     |LUT2    |   423|
+|9     |LUT3    |   665|
+|10    |LUT4    |   482|
+|11    |LUT5    |   463|
+|12    |LUT6    |   767|
+|13    |MUXF7   |     3|
+|14    |FDRE    |   421|
+|15    |FDSE    |    25|
+|16    |IBUF    |    10|
+|17    |OBUF    |    38|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 1153.449 ; gain = 154.285
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:59 ; elapsed = 00:01:10 . Memory (MB): peak = 1153.449 ; gain = 148.723
+Synthesis Optimization Complete : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 1153.449 ; gain = 154.285
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.110 . Memory (MB): peak = 1159.285 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 483 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1159.285 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+166 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:21 ; elapsed = 00:01:26 . Memory (MB): peak = 1159.285 ; gain = 160.121
+INFO: [Common 17-1381] The checkpoint 'C:/Users/246922/Project_PWM/Project_PWM.runs/synth_1/top_level.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_level_utilization_synth.rpt -pb top_level_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 19 09:15:41 2024...
