@@ -9,4 +9,4 @@ Periodické zvukové signály se nazývají **tóny**. Tyto tóny mají svou zá
 ![Pohled na zařízení](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/ForReadMe/top_level.png)
 
 
-Podrobnější informace k projektu naleznete [zde](https://github.com/VojtaKudela/BPC-DE1-topic_4/raw/main/Documentation/Disp_control_fin.docx).
+Podrobnější informace k projektu naleznete [zde](https://github.com/VojtaKudela/BPC-DE1-topic_4/raw/main/Dokumentace.docx).
