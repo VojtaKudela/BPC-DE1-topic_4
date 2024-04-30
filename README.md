@@ -4,4 +4,4 @@
 	David Matějček (zodpovědný za komparátor a testování)
 	Antonín Putala (zodpovědný za generátory, PWM modulátor a demo nahrávky)
 
-* Teoretický popis a vysvětlení
+** Teoretický popis a vysvětlení
