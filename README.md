@@ -8,6 +8,19 @@ Periodické zvukové signály se nazývají **tóny**. Tyto tóny mají svou zá
 ![Pohled na zařízení](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/1713725654572.jpg)
 ![Pohled na zařízení](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/ForReadMe/top_level.png)
 
-# Odkaz na video a dokumentaci
+### Odkaz na video a dokumentaci
 * Odkaz na video [zde](https://youtu.be/y9z3xt5LS8A).
 * Podrobnější informace k projektu naleznete [zde](https://github.com/VojtaKudela/BPC-DE1-topic_4/raw/main/Dokumentace.docx).
+
+### Reference
+* [Online VHDL Testbench Template Generator (lapinoo.net)](https://vhdl.lapinoo.net/testbench/).
+* Analogová elektronika 2 – doc. Ing Roman Šotner, PhD.
+* [Pulsně šířková modulace (dhservis.cz)](http://www.dhservis.cz/psm.htm).
+* [František Fuka: Hudba z geekovsko-matematického hlediska - DevFest Praha 2012 (youtube.com)](https://www.youtube.com/watch?v=RQuRFCE5NzI).
+* [Do you hear a people sing? – Claude-Michel Schönberg](https://www.youtube.com/watch?v=gYb9sRLUDyM).
+* [Für Elise – Ludwig van Beethoven](https://www.youtube.com/watch?v=q9bU12gXUyM).
+* [Entertainer – Scott Joplin](https://www.youtube.com/watch?v=Fxk9qwCFf8s).
+* [Microsoft PowerPoint - aud_prednaska_1 (vut.cz)](https://moodle.vut.cz/pluginfile.php/827361/mod_resource/content/3/aud_prednaska_1.pdf).
+* [Bc. Václav Štěpán – Funkční generator na principu přímé digitální syntézy](https://dspace.cvut.cz/bitstream/handle/10467/61546/F3-DP-2015-Stepan-Vaclav-diplomka-kompl.pdf?sequence=1).
+* [Nexys A7 - Digilent Reference](https://digilent.com/reference/programmable-logic/nexys-a7/start).
+* [Elektronická učebnice - ELUC (ikap.cz)](https://eluc.ikap.cz/verejne/lekce/924).
