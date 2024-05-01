@@ -1,3 +1,11 @@
+# Topic 4: PWM-Based Tone Generator
+Členové týmu
+
+1. Vít Janoš (zodpovědný za obsluhu sedmisegmentového displeje)
+2. Vojtěch Kudela (zodpovědný za obsluhu maticové klávesnice a správu GitHub)
+3. David Matějček (zodpovědný za komparátor a testování)
+4. Antonín Putala (zodpovědný za generátor, PWM modulátor a demo nahrávky)
+
 ## Teoretický popis a vysvětlení
 
 **Zvuk** je podélné mechanické vlnění. Zvuková vlna působí výchylku od atmosférického tlaku. Aby byl zvuk pro člověka slyšitelný, musí být o kmitočtu 20 Hz až 20 kHz a větší výchylku než práh slyšení P0 = 2·10<sup>-5</sup> Pa. Dlužno podotknout, že citlivost lidského sluchu je frekvenčně závislé, práh slyšení i kmitočtový rozsah se liší dle jednotlivce. Lidské ucho vnímá hlasitost logaritmicky, proto se hlasitost vyjadřuje v decibelové míře.
@@ -8,7 +16,7 @@ Periodické zvukové signály se nazývají **tóny**. Tyto tóny mají svou zá
 ![Pohled na zařízení](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/1713725654572.jpg)
 ![Pohled na zařízení](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/ForReadMe/top_level.png)
 
-### Odkaz k projektu
+### Odkazy k projektu
 * Demonstrační video funkce PWM tónového generátoru naleznete [zde](https://youtu.be/y9z3xt5LS8A).
 * Podrobnější informace k projektu naleznete [zde](https://github.com/VojtaKudela/BPC-DE1-topic_4/raw/main/Dokumentace.docx).
 
