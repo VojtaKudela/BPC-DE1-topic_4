@@ -63,7 +63,43 @@ Zde naleznete pár simulací **_vybraných_** komponentů. Více simulací nalez
 
 
 ## Instrukční návod
-Návod k obsluze PWM tónového generátoru ve formě videa naleznete [zde](https://youtu.be/y9z3xt5LS8A).
+Toto zařízení představuje elektronický klávesový hudební nástroj s třemi předvolbami zvuku. Na výstupní konektor je možné připojit reproduktor i sluchátka. Zařízení také obsahuje tři DEMO nahrávky. 
+
+### Popis částí
+![Popis částí](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/ForReadMe/Popis%20%C4%8D%C3%A1st%C3%AD.png)
+
+### Popis ovládacích prvků
+Po spuštění desky zařízení začne pracovat. Chod zařízení řídí tlačítky na desce. Umožňují nastavovat hlasitost, přepínat mezi jednotlivými módy zařízení a provést reset. Displej podává informaci o aktuálním stavu zařízení.
+
+![Popis ovládacích prvků](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/ForReadMe/Popis%20ovl%C3%A1dac%C3%ADch%20prvk%C5%AF.png)
+
+### Nastavení hlasitosti
+Hlasitost nastavíte stiskem tlačítek **VOLUME +/‒**. Hlasitost je možné nastavovat v **rozmezí 0 – 15**. Při stisku se na displeji zobrazí nastavená velikost hlasitosti. *Při nastavování hlasitosti nebude zařízení vytvářet žádné zvuky*. Hlasitost má vliv na hlasitost při ovládání prostřednictvím klaviatury, **_při přehrávání demo nahrávek nebude mít vliv_**.
+
+### Nastavení módu
+Mód zařízení nastavíte stiskem tlačítek MODE PŘEDCHOZÍ/DALŠÍ. Zařízení pracuje ve třech módech jako hudební nástroj: **SQUARE**, **TRIANGLE** a **SAW**. Tyto módy poskytují uživateli různé barvy zvuku. Při těchto módech bude reagovat klaviatura na stisknutí jednotlivých kláves.
+
+Další tři módy obsahují DEMO nahrávky. Jedná se o módy: **DEMOA**, **DEMOB** a **DEMOC**. Při přepnutí začne demo nahrávka vždy od začátku. Na začátek se lze vrátit též stisknutím tlačítka reset.
+
+Nastavený mód bude zobrazen na displeji.
+
+
+### Klaviatura
+Před hraním se ujistěte, že je zvolen mód **SQUARE**, **TRIANGLE** nebo **SAW**. Klávesy mají shodné uspořádaní jako na klavíru. Zařízení má rozsah od **_a_** po **_c2_**. Zařízení může generovat vždy pouze **jeden tón**. Generovanému tónu odpovídá světelná kontrolka na desce. *Pokud po puštění tlačítka bude i nadále zařízení generovat zvuk, zmáčkněte tlačítko RESET*.
+
+![Klaviatura](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/ForReadMe/Klaviatura.png)
+
+### Demo nahrávky
+Zvolte jeden z módů: **DEMOA**, **DEMOB**, **DEMOC**. Nahrávka začne automaticky hrát. Při stisknutí RESET začne hrát od začátku. Pozor v tomto módu se neprojeví změny hlasitosti ani stisknutí klávesy na klaviatuře!
+
+Jednotlivé DEMO nahrávky odpovídají těmto skladbám:
+
+* **DEMOA: _Für Elise – Lugwig van Beethoven_**
+* **DEMOB: _Do you heard a people sing – Claude-Michel Schönberg_**
+* **DEMOC: _Entertainer – Scott Joplin_**
+
+
+Pro ukázku obsluhy zařízení a jeho činnosti za chodu ve formě videa klikněte [zde](https://youtu.be/y9z3xt5LS8A).
 
 ## Odkazy k projektu
 * Demonstrační video funkce PWM tónového generátoru naleznete [zde](https://youtu.be/y9z3xt5LS8A).
