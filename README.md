@@ -21,7 +21,7 @@ Generace zvukových signálů pomocí FPGA působí problém, protože zvukový 
 
 
 ## Hardwarový popis a demo aplikace
-Zařízení bylo oživeno a testováno na desce NEXY-A7-50T. Tato deska obsahuje mimo jiné osmimístný sedmisegmentový display, 16 LED diod a 5 tlačítek, což jsou periferie, které byly užity. Další zařízení byla připojena na vnější porty JA a JB. Na ty byly připojeny vnější periferie Jack 3,5mm pro připojení reproduktoru a maticová klávesnice upravená jako klaviatura piana pro _zadávání tónu do zařízení_.
+Zařízení bylo oživeno a testováno na desce **NEXY-A7-50T**. Tato deska obsahuje mimo jiné **osmimístný sedmisegmentový display**, **16 LED diod** a **5 tlačítek**, což jsou periferie, které byly užity. Další zařízení byla připojena na vnější porty **JA** a **JB**. Na ty byly připojeny vnější periferie Jack 3,5mm pro připojení reproduktoru a maticová klávesnice upravená jako klaviatura piana pro _zadávání tónu do zařízení_.
 
 ### Náhled na zařízení
 ![Pohled na zařízení](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/1713725654572.jpg)
