@@ -28,7 +28,6 @@ Periodické zvukové signály se nazývají **tóny**. Tyto tóny mají svou zá
 * [Do you hear a people sing? – Claude-Michel Schönberg](https://www.youtube.com/watch?v=gYb9sRLUDyM).
 * [Für Elise – Ludwig van Beethoven](https://www.youtube.com/watch?v=q9bU12gXUyM).
 * [Entertainer – Scott Joplin](https://www.youtube.com/watch?v=Fxk9qwCFf8s).
-* [Microsoft PowerPoint - aud_prednaska_1 (vut.cz)](https://moodle.vut.cz/pluginfile.php/827361/mod_resource/content/3/aud_prednaska_1.pdf).
 * [Bc. Václav Štěpán – Funkční generator na principu přímé digitální syntézy](https://dspace.cvut.cz/bitstream/handle/10467/61546/F3-DP-2015-Stepan-Vaclav-diplomka-kompl.pdf?sequence=1).
 * [Nexys A7 - Digilent Reference](https://digilent.com/reference/programmable-logic/nexys-a7/start).
 * [Elektronická učebnice - ELUC (ikap.cz)](https://eluc.ikap.cz/verejne/lekce/924).
