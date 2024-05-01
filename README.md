@@ -43,7 +43,7 @@ _16 je pomocný blok, který zajišťuje rozsvícení odpovídající diody, vž
 
 
 ## Simulace komponentů 
-Zde je pár simulací vybraných komponentů
+Zde naleznete pár simulací vybraných komponentů. Více naleznete v [dokumentaci](https://github.com/VojtaKudela/BPC-DE1-topic_4/raw/main/Dokumentace.docx)
 
 ### Simulace PWM_MOD - *mod_in = x"0F"*
 ![Simulace SAW_GEN](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/Sim/PWM_3.png)
