@@ -35,7 +35,7 @@ Jedná se nejvyšší úroveň celého zařízení. Zde jsou utvořeny vývody p
 ### Připojení jednotlivých vodičů na svorkovnici JA
 ![Připojení jednotlivých vodičů na svorkovnici JA](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/ForReadMe/Zapojeni.png)
 
-### Tabulka rozložení tlačítek na maticovém displeji ‒ řádek, sloupec, kód, který zařízení vygeneruje po stisku tlačítka
+### Tabulka rozložení tlačítek na maticovém displeji
 ![Rozložení tlačítek na maticovém displeji](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/ForReadMe/Tabulka%20rozlo%C5%BEen%C3%AD%20tla%C4%8D%C3%ADtek%20na%20maticov%C3%A9m%20displeji%20.png)
 
 
