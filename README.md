@@ -54,12 +54,12 @@ Zde je pár simulací vybraných komponentů
 ![Simulace SAW_GEN](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/Sim/main_loop.png)
 
 
-### Odkazy k projektu
+## Odkazy k projektu
 * Demonstrační video funkce PWM tónového generátoru naleznete [zde](https://youtu.be/y9z3xt5LS8A).
 * Podrobnější informace k projektu naleznete v [dokumentaci](https://github.com/VojtaKudela/BPC-DE1-topic_4/raw/main/Dokumentace.docx).
 
 
-### Reference
+## Reference
 1. [Online VHDL Testbench Template Generator (lapinoo.net)](https://vhdl.lapinoo.net/testbench/).
 2. Analogová elektronika 2 – doc. Ing Roman Šotner, PhD.
 3. [Pulsně šířková modulace (dhservis.cz)](http://www.dhservis.cz/psm.htm).
