@@ -58,6 +58,9 @@ Zde naleznete pár simulací **_vybraných_** komponentů. Více simulací nalez
 ![Simulace SAW_GEN](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/Sim/main_loop.png)
 
 
+## Instrukční návod
+Návod k obsluze PWM tónového generátoru ve formě videa naleznete [zde](https://youtu.be/y9z3xt5LS8A).
+
 ## Odkazy k projektu
 * Demonstrační video funkce PWM tónového generátoru naleznete [zde](https://youtu.be/y9z3xt5LS8A).
 * Podrobnější informace k projektu naleznete v [dokumentaci](https://github.com/VojtaKudela/BPC-DE1-topic_4/raw/main/Dokumentace.docx).
