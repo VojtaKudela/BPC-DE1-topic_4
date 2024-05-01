@@ -42,16 +42,16 @@ _16 je pomocný blok, který zajišťuje rozsvícení odpovídající diody, vž
 Zde je pár simulací vybraných komponentů
 
 ### Simulace PWM_MOD - *mod_in = x"0F"*
-[Simulace SAW_GEN](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/Sim/PWM_3.png)
+![Simulace SAW_GEN](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/Sim/PWM_3.png)
 
 ### Simulace TRI_GEN
-[Simulace TRI_GEN](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/Sim/tri_gen.png)
+![Simulace TRI_GEN](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/Sim/tri_gen.png)
 
 ### Simulace SAW_GEN
-[Simulace SAW_GEN](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/Sim/saw_gen.png)
+![Simulace SAW_GEN](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/Sim/saw_gen.png)
 
 ### Simulace MAIN_LOOP
-[Simulace SAW_GEN](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/Sim/main_loop.png)
+![Simulace SAW_GEN](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/Sim/main_loop.png)
 
 
 ### Odkazy k projektu
