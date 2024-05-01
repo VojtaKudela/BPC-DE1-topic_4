@@ -13,22 +13,22 @@
 
 Periodické zvukové signály se nazývají **tóny**. Tyto tóny mají svou základní frekvenci, která je označovaná jako výška. Podle výšky také nese tón název. V hudební teorii se používá označení oktáva pro zdvojnásobení kmitočtu. Pokud zdvojnásobíme kmitočet tónu, ponese stejný název pouze bude ležet ve vyšší oktávě. Jako základní tón se užívá komorní A s kmitočtem f = 440 Hz. Oktáva se v evropské hudební teorii rozděluje na 12 dílů. Ty se nazývají půltóny. Každému půltónu je přiřazen kmitočet. Tento kmitočet se určí jako součin základního kmitočtu a poměru pro konkrétní půltón. Pokud změníme frekvenci základního tónu, změní se kmitočty všech půltónů. 
 
-### Princip PWM modulace
-Generace zvukových signálů pomocí FPGA působí problém, protože zvukový signál je spojitý, zatímco FPGA má pouze dvoustavové výstupy. Řešením je užití **pulzně šířkové modulace** (PWM). PWM je modulace, při které se střída výstupního obdélníkového signálu mění v závislosti na okamžité hodnotě modulovaného signálu. Velká výchylka okamžitého signálu se projeví větší střídou, menší výchylka menší střídou. Hlavním benefitem je 1bitový výstup, který může být přímo zaveden do reproduktoru. Pokud je potřeba získat původní signál stačí užít dolní propust.
+## Princip PWM modulace
+Generace zvukových signálů pomocí FPGA působí problém, protože zvukový signál je spojitý, zatímco FPGA má pouze dvoustavové výstupy. Řešením je užití **pulzně šířkové modulace** (PWM). PWM je modulace, při které se **_střída výstupního obdélníkového signálu mění v závislosti na okamžité hodnotě modulovaného signálu_**. Velká výchylka okamžitého signálu se projeví větší střídou, menší výchylka menší střídou. Hlavním benefitem je 1bitový výstup, který může být přímo zaveden do reproduktoru. Pokud je potřeba získat původní signál stačí užít dolní propust.
 
  **Schéma principu PWM modulace**
  ![Princip PWM modulace](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/ForReadMe/PWM_princip.png)
 
 
 ## Hardwarový popis a demo aplikace
-Zařízení bylo oživeno a testováno na desce NEXY-A7-50T. Tato deska obsahuje mimo jiné osmimístný sedmisegmentový display, 16 LED diod a 5 tlačítek, což jsou periferie, které byly užity. Další zařízení byla připojena na vnější porty JA a JB. Na ty byly připojeny vnější periferie Jack 3,5mm pro připojení reproduktoru a maticová klávesnice upravená jako klaviatura piana pro zadávání tónu do zařízení.
+Zařízení bylo oživeno a testováno na desce NEXY-A7-50T. Tato deska obsahuje mimo jiné osmimístný sedmisegmentový display, 16 LED diod a 5 tlačítek, což jsou periferie, které byly užity. Další zařízení byla připojena na vnější porty JA a JB. Na ty byly připojeny vnější periferie Jack 3,5mm pro připojení reproduktoru a maticová klávesnice upravená jako klaviatura piana pro _zadávání tónu do zařízení_.
 
 ### Náhled na zařízení
 ![Pohled na zařízení](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/1713725654572.jpg)
 
 
 ### Top level
-Jedná se nejvyšší úroveň celého zařízení. Zde jsou utvořeny vývody pro jednotlivé periferie, které jsou poté přiřazeny pomocí contrainu. Vývody BTNC, BTND, BTNU, BTNR a BTNL jsou připojeny k jednotlivým tlačítkům na desce. Vývod LED[15:0] je připojen k LED diodám na desce. Vývody CA, CB, CC, CD, CE, CF, CG, DP, AN[7:0] řídí sedmisegmentový display. Vývod CLK100MHZ je potom připojen na zdroj hodinových pulzů a AUD_PWM je připojen přes Sallen-Key dolní propust na mono Jack. Vývody s0, s1, s2, s3 jsou připojeny ke sloupcům maticové klávesnice a vývody r0, r1, r2, r3 jsou připojeny k řádkům maticové klávesnice. Vývod JB je připojen na vnější Jack, který slouží k připojení reproduktorů nebo sluchátek. Konkrétně je připojen na pin 1 na svorkovnici JB. 
+**_Jedná se nejvyšší úroveň celého zařízení_**. Zde jsou utvořeny vývody pro jednotlivé periferie, které jsou poté přiřazeny pomocí contrainu. Vývody **BTNC**, **BTND**, **BTNU**, **BTNR** a **BTNL** jsou připojeny k jednotlivým tlačítkům na desce. Vývod **LED[15:0]** je připojen k LED diodám na desce. Vývody **CA**, **CB**, **CC**, **CD**, **CE**, **CF**, **CG**, **DP**, **AN[7:0] _řídí sedmisegmentový display_**. Vývod CLK100MHZ je potom připojen na **zdroj hodinových pulzů** a **AUD_PWM** je připojen přes Sallen-Key dolní propust na mono Jack. Vývody s0, s1, s2, s3 jsou připojeny ke _sloupcům_ maticové klávesnice a vývody r0, r1, r2, r3 jsou připojeny k _řádkům_ maticové klávesnice. Vývod JB je připojen na vnější Jack, který slouží k připojení reproduktorů nebo sluchátek. Konkrétně je připojen na _pin 1_ na svorkovnici **JB**. Podrobnější informace naleznete v [dokumentaci](https://github.com/VojtaKudela/BPC-DE1-topic_4/raw/main/Dokumentace.docx)
 
 ![TOP_LEVEL](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/ForReadMe/top_level.png)
 
@@ -40,8 +40,7 @@ Jedná se nejvyšší úroveň celého zařízení. Zde jsou utvořeny vývody p
 
 
 ## Sofwarový popis
-Celé zařízení je možno si rozdělit do tří velkých bloků: DISPLAY_AND_GEN, DEMO MAIN a MATRIX_CONTROL. Každý z nich obsahuje odlišnou část zařízení. DISPLAY_AND_GEN má podřízenou obsluhu displeje, generaci signálů, PWM modulátor a obsluhu tlačítek volume mode. Obsahuje mimo jiné blok MAIN_LOOP, který umožňuje přechod zařízení mezi jednotlivými módy. Blok DEMO_MODE obsahuje informace o frekvenci a hlasitosti tří demo nahrávek a pomocnou logiku pro vytvoření příslušného signálu. MATRIX_CONTROL má za úkol obsluhovat maticovou klávesnici a předávat ostatním blokům informaci o tom, které tlačítko bylo stisknuto. Obvod CODER_1_FROM
-_16 je pomocný blok, který zajišťuje rozsvícení odpovídající diody, vždy při stisku klávesy. Všechny tyto bloky jsou zastřešeny design source DISPLAY_AND_GEN_AND_DEMO, který je přímo podřízen TOP_LEVEL. Podrobnější popisy funkcí a schéma zapojení jednotlivých bloků naleznete v [dokumentaci](https://github.com/VojtaKudela/BPC-DE1-topic_4/raw/main/Dokumentace.docx)
+Celé zařízení je možno si rozdělit do tří velkých bloků: **DISPLAY_AND_GEN**, **DEMO MAIN** a **MATRIX_CONTROL**. Každý z nich obsahuje odlišnou část zařízení. **DISPLAY_AND_GEN** má podřízenou obsluhu displeje, generaci signálů, PWM modulátor a obsluhu tlačítek volume mode. Obsahuje mimo jiné blok **MAIN_LOOP**, který umožňuje přechod zařízení mezi jednotlivými módy. Blok **DEMO_MODE** obsahuje informace o frekvenci a hlasitosti tří demo nahrávek a pomocnou logiku pro vytvoření příslušného signálu. **MATRIX_CONTROL** má za úkol obsluhovat maticovou klávesnici a předávat ostatním blokům informaci o tom, které tlačítko bylo stisknuto. Obvod **CODER_1_FROM_16** je pomocný blok, který zajišťuje _rozsvícení odpovídající diody_, vždy při stisku klávesy. Všechny tyto bloky jsou zastřešeny design source **DISPLAY_AND_GEN_AND_DEMO**, který je přímo podřízen **TOP_LEVEL**. Podrobnější popisy funkcí a schéma zapojení jednotlivých bloků naleznete v [dokumentaci](https://github.com/VojtaKudela/BPC-DE1-topic_4/raw/main/Dokumentace.docx)
 
 ![Zapojení DISPLAY_AND_GEN_DEMO](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/ForReadMe/display_and_gen_and_demo.png)
 
@@ -63,13 +62,13 @@ Zde naleznete pár simulací **_vybraných_** komponentů. Více simulací nalez
 
 
 ## Instrukční návod
-Toto zařízení představuje elektronický klávesový hudební nástroj s třemi předvolbami zvuku. Na výstupní konektor je možné připojit reproduktor i sluchátka. Zařízení také obsahuje tři DEMO nahrávky. 
+Toto zařízení představuje _elektronický klávesový hudební nástroj s třemi předvolbami zvuku_. Na výstupní konektor je možné připojit reproduktor i sluchátka. Zařízení také obsahuje **tři DEMO nahrávky**. 
 
 ### Popis částí
 ![Popis částí](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/ForReadMe/Popis%20%C4%8D%C3%A1st%C3%AD.png)
 
 ### Popis ovládacích prvků
-Po spuštění desky zařízení začne pracovat. Chod zařízení řídí tlačítky na desce. Umožňují nastavovat hlasitost, přepínat mezi jednotlivými módy zařízení a provést reset. Displej podává informaci o aktuálním stavu zařízení.
+Po spuštění desky zařízení začne pracovat. Chod zařízení _řídí tlačítky na desce_. Umožňují nastavovat **hlasitost**, **přepínat mezi jednotlivými módy zařízení** a provést **reset**. Displej podává informaci o **aktuálním stavu zařízení**.
 
 ![Popis ovládacích prvků](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/ForReadMe/Popis%20ovl%C3%A1dac%C3%ADch%20prvk%C5%AF.png)
 
@@ -98,7 +97,7 @@ Jednotlivé DEMO nahrávky odpovídají těmto skladbám:
 * **DEMOB: _Do you heard a people sing – Claude-Michel Schönberg_**
 * **DEMOC: _Entertainer – Scott Joplin_**
 
-
+### Video ukázka
 Pro ukázku obsluhy zařízení a jeho činnosti za chodu ve formě videa klikněte [zde](https://youtu.be/y9z3xt5LS8A).
 
 ## Odkazy k projektu
