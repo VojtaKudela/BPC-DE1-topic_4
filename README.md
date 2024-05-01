@@ -15,15 +15,22 @@ Periodické zvukové signály se nazývají **tóny**. Tyto tóny mají svou zá
 ![Princip PWM modulace](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/ForReadMe/PWM_princip.png)
 
 ## Hardwarový popis a demo aplikace
+Zařízení bylo oživeno a testováno na desce NEXY-A7-50T. Tato deska obsahuje mimo jiné osmimístný sedmisegmentový display, 16 LED diod a 5 tlačítek, což jsou periferie, které byly užity. Další zařízení byla připojena na vnější porty JA a JB. Na ty byly připojeny vnější periférie Jack 3,5mm pro připojení reproduktoru a maticová klávesnice upravená jako klaviatura piana pro zadávání tónu do zařízení.
 ![Pohled na zařízení](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/1713725654572.jpg)
-Top level
+
+### Top level
+Jedná se nejvyšší úroveň 
 ![Pohled na zařízení](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/ForReadMe/top_level.png)
 
 ## Sofwarový popis
+Ceké zařízení je možno si rozdělit do tří velkých bloků: DISPLAY_AND_GEN, DEMO MAIN a MATRIX_CONTROL. Každý z nich obsahuje odlišnou část zařízení. DISPLAY_AND_GEN má podřízenou obsluhu displeje, generaci signálů, PWM modulátor a obsluhu tlačítek volume mode. Obsahuje mimo jiné blok MAIN_LOOP, který umožňuje přechod zařízení mezi jednotlivými módy. Blok DEMO_MODE obsahuje informace o frekvenci a hlasitosti tří demo nahrávek a pomocnou logiku pro vytvoření příslušného signálu. MATRIX_CONTROL má za úkol obsluhovat maticovou klávesnici a předávat ostatním blokům informaci o tom, které tlačítko bylo stisknuto. Obvod CODER_1_FROM
+_16 je pomocný blok, který zajišťuje rozsvícení odpovídající diody, vždy při stisku klávesy. Všechny tyto bloky jsou zastřešeny design source DISPLAY_AND_GEN_AND_DEMO, který je přímo podřízen TOP_LEVEL.
+![Zapojení DISPLAY_AND_GEN_DEMO](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/ForReadMe/display_and_gen_and_demo.png)
+Podrobnější popisy funkcí a schéma zapojení jednotlivých bloků naleznete v [dokumentaci](https://github.com/VojtaKudela/BPC-DE1-topic_4/raw/main/Dokumentace.docx)
 
 ### Odkazy k projektu
 * Demonstrační video funkce PWM tónového generátoru naleznete [zde](https://youtu.be/y9z3xt5LS8A).
-* Podrobnější informace k projektu naleznete [zde](https://github.com/VojtaKudela/BPC-DE1-topic_4/raw/main/Dokumentace.docx).
+* Podrobnější informace k projektu naleznete v [dokumentaci](https://github.com/VojtaKudela/BPC-DE1-topic_4/raw/main/Dokumentace.docx).
 
 ### Reference
 1. [Online VHDL Testbench Template Generator (lapinoo.net)](https://vhdl.lapinoo.net/testbench/).
