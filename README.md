@@ -28,7 +28,7 @@ Zařízení bylo oživeno a testováno na desce **NEXY-A7-50T**. Tato deska obsa
 
 
 ### Top level
-**_Jedná se nejvyšší úroveň celého zařízení_**. Zde jsou utvořeny vývody pro jednotlivé periferie, které jsou poté přiřazeny pomocí contrainu. Vývody **BTNC**, **BTND**, **BTNU**, **BTNR** a **BTNL** jsou připojeny k jednotlivým tlačítkům na desce. Vývod **LED[15:0]** je připojen k LED diodám na desce. Vývody **CA**, **CB**, **CC**, **CD**, **CE**, **CF**, **CG**, **DP**, **AN[7:0] _řídí sedmisegmentový display_**. Vývod CLK100MHZ je potom připojen na **zdroj hodinových pulzů** a **AUD_PWM** je připojen přes Sallen-Key dolní propust na mono Jack. Vývody s0, s1, s2, s3 jsou připojeny ke _sloupcům_ maticové klávesnice a vývody r0, r1, r2, r3 jsou připojeny k _řádkům_ maticové klávesnice. Vývod JB je připojen na vnější Jack, který slouží k připojení reproduktorů nebo sluchátek. Konkrétně je připojen na _pin 1_ na svorkovnici **JB**. Podrobnější informace naleznete v [dokumentaci](https://github.com/VojtaKudela/BPC-DE1-topic_4/raw/main/Dokumentace.docx).
+**_Jedná se nejvyšší úroveň celého zařízení_**. Zde jsou utvořeny vývody pro jednotlivé periferie, které jsou poté přiřazeny pomocí contrainu. Vývody **BTNC**, **BTND**, **BTNU**, **BTNR** a **BTNL** jsou připojeny k jednotlivým tlačítkům na desce. Vývod **LED[15:0]** je připojen k LED diodám na desce. Vývody **CA**, **CB**, **CC**, **CD**, **CE**, **CF**, **CG**, **DP**, **AN[7:0] _řídí sedmisegmentový display_**. Vývod CLK100MHZ je potom připojen na **zdroj hodinových pulzů** a **AUD_PWM** je připojen přes Sallen-Key dolní propust na mono Jack. Vývody s0, s1, s2, s3 jsou připojeny ke _sloupcům_ maticové klávesnice a vývody r0, r1, r2, r3 jsou připojeny k _řádkům_ maticové klávesnice. Vývod JB je připojen na vnější Jack, který slouží k připojení reproduktorů nebo sluchátek. Konkrétně je připojen na _pin 1_ na svorkovnici **JB**. Podrobnější informace naleznete v [dokumentaci](https://github.com/VojtaKudela/BPC-DE1-topic_4/raw/main/Documentation/Dokumentace-final.docx).
 
 ![TOP_LEVEL](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/ForReadMe/top_level.png)
 
@@ -40,13 +40,13 @@ Zařízení bylo oživeno a testováno na desce **NEXY-A7-50T**. Tato deska obsa
 
 
 ## Sofwarový popis
-Celé zařízení je možno si rozdělit do tří velkých bloků: **DISPLAY_AND_GEN**, **DEMO MAIN** a **MATRIX_CONTROL**. Každý z nich obsahuje odlišnou část zařízení. **DISPLAY_AND_GEN** má podřízenou obsluhu displeje, generaci signálů, PWM modulátor a obsluhu tlačítek volume mode. Obsahuje mimo jiné blok **MAIN_LOOP**, který umožňuje přechod zařízení mezi jednotlivými módy. Blok **DEMO_MODE** obsahuje informace o frekvenci a hlasitosti tří demo nahrávek a pomocnou logiku pro vytvoření příslušného signálu. **MATRIX_CONTROL** má za úkol obsluhovat maticovou klávesnici a předávat ostatním blokům informaci o tom, které tlačítko bylo stisknuto. Obvod **CODER_1_FROM_16** je pomocný blok, který zajišťuje _rozsvícení odpovídající diody_, vždy při stisku klávesy. Všechny tyto bloky jsou zastřešeny design source **DISPLAY_AND_GEN_AND_DEMO**, který je přímo podřízen **TOP_LEVEL**. Podrobnější popisy funkcí a schéma zapojení jednotlivých bloků naleznete v [dokumentaci](https://github.com/VojtaKudela/BPC-DE1-topic_4/raw/main/Dokumentace.docx).
+Celé zařízení je možno si rozdělit do tří velkých bloků: **DISPLAY_AND_GEN**, **DEMO MAIN** a **MATRIX_CONTROL**. Každý z nich obsahuje odlišnou část zařízení. **DISPLAY_AND_GEN** má podřízenou obsluhu displeje, generaci signálů, PWM modulátor a obsluhu tlačítek volume mode. Obsahuje mimo jiné blok **MAIN_LOOP**, který umožňuje přechod zařízení mezi jednotlivými módy. Blok **DEMO_MODE** obsahuje informace o frekvenci a hlasitosti tří demo nahrávek a pomocnou logiku pro vytvoření příslušného signálu. **MATRIX_CONTROL** má za úkol obsluhovat maticovou klávesnici a předávat ostatním blokům informaci o tom, které tlačítko bylo stisknuto. Obvod **CODER_1_FROM_16** je pomocný blok, který zajišťuje _rozsvícení odpovídající diody_, vždy při stisku klávesy. Všechny tyto bloky jsou zastřešeny design source **DISPLAY_AND_GEN_AND_DEMO**, který je přímo podřízen **TOP_LEVEL**. Podrobnější popisy funkcí a schéma zapojení jednotlivých bloků naleznete v [dokumentaci](https://github.com/VojtaKudela/BPC-DE1-topic_4/raw/main/Documentation/Dokumentace-final.docx).
 
 ![Zapojení DISPLAY_AND_GEN_DEMO](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/ForReadMe/display_and_gen_and_demo.png)
 
 
 ## Simulace komponentů 
-Zde naleznete pár simulací **_vybraných_** komponentů. Více simulací naleznete v [dokumentaci](https://github.com/VojtaKudela/BPC-DE1-topic_4/raw/main/Dokumentace.docx).
+Zde naleznete pár simulací **_vybraných_** komponentů. Více simulací naleznete v [dokumentaci](https://github.com/VojtaKudela/BPC-DE1-topic_4/raw/main/Documentation/Dokumentace-final.docx).
 
 ### Simulace PWM_MOD - *mod_in = x"0F"*
 ![Simulace SAW_GEN](https://github.com/VojtaKudela/BPC-DE1-topic_4/blob/main/Picture/Sim/PWM_3.png)
@@ -102,7 +102,7 @@ Pro ukázku obsluhy zařízení a jeho činnosti za chodu ve formě videa klikn�
 
 ## Odkazy k projektu
 * Demonstrační video funkce PWM tónového generátoru naleznete [zde](https://youtu.be/y9z3xt5LS8A).
-* Podrobnější informace k projektu naleznete v [dokumentaci](https://github.com/VojtaKudela/BPC-DE1-topic_4/raw/main/Dokumentace.docx).
+* Podrobnější informace k projektu naleznete v [dokumentaci](https://github.com/VojtaKudela/BPC-DE1-topic_4/raw/main/Documentation/Dokumentace-final.docx).
 
 
 ## Reference
