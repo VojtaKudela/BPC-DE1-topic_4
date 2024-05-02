@@ -283,7 +283,7 @@ disp_ctr : component disp_control
            input_52 => "00001",  -- 1
            input_53 => "00010",  -- 2
            input_54 => "00011",  -- 3
-           input_55 => "11110",
+           input_55 => "11110",  -- empty
            
            input_56 => "11110",  -- empty
            input_57 => "11110",  -- empty
